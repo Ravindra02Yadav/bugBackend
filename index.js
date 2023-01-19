@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const {UserModal}  = require('./modals/user.modal');
+
 const {connection} = require('./config/db');
 const {UserRouter} = require('./routes/user.route');
 const { BugRouter } = require('./routes/bug.routes');
@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(cors({
     origin:'*'
-}));
+} ));
 
 app.get("/",(req,res)=>{
     res.send("Welcome To Home Routes");
